@@ -36,25 +36,14 @@ namespace SelfCert
         }
     }
 
-    public class StoreLocationSelectItem
-        : SelectItem<StoreLocation>
+    public class EnumSelectItem<T>
+        : SelectItem<T>
     {
-        public StoreLocationSelectItem(
-            StoreLocation location)
-            : base(location)
+        public EnumSelectItem(
+            T value)
+            : base(value)
         {
-            Description = Properties.Resources.ResourceManager.GetString("StoreLocation" + location);
-        }
-    }
-
-    public class StoreNameSelectItem
-        : SelectItem<StoreName>
-    {
-        public StoreNameSelectItem(
-            StoreName name)
-            : base(name)
-        {
-            Description = Properties.Resources.ResourceManager.GetString("StoreName" + name);
+            Description = Properties.Resources.ResourceManager.GetString(typeof(T).Name + value);
         }
     }
 }

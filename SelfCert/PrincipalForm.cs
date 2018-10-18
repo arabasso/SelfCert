@@ -32,14 +32,14 @@ namespace SelfCert
 
             SaveLocationComboBox.DataSource = Enum.GetValues(typeof(StoreLocation))
                     .OfType<StoreLocation>()
-                    .Select(s => new StoreLocationSelectItem(s))
+                    .Select(s => new EnumSelectItem<StoreLocation>(s))
                     .OrderBy(ob => ob.Description)
                     .ToList();
             SaveLocationComboBox.SelectedIndex = 1;
 
             SaveStoreComboBox.DataSource = Enum.GetValues(typeof(StoreName))
                 .OfType<StoreName>()
-                .Select(s => new StoreNameSelectItem(s))
+                .Select(s => new EnumSelectItem<StoreName>(s))
                 .OrderBy(ob => ob.Description)
                 .ToList();
             SaveStoreComboBox.SelectedIndex = 5;
@@ -74,9 +74,9 @@ namespace SelfCert
         {
             using (var dialog = new OpenFileDialog())
             {
-                dialog.Filter = @"Files .pfx|*.pfx";
+                dialog.Filter = Properties.Resources.IssuerFileDialogFilter;
 
-                if (dialog.ShowDialog() == DialogResult.OK)
+                if (dialog.ShowDialog(this) == DialogResult.OK)
                 {
                     IssuerFileTextBox.Text = dialog.FileName;
                 }
@@ -201,13 +201,13 @@ namespace SelfCert
                 {
                     using (var dialog = new SaveFileDialog())
                     {
-                        dialog.Filter = @"Files *.pfx|*.pfx";
+                        dialog.Filter = Properties.Resources.SaveFileDialogFilter;
 
-                        if (dialog.ShowDialog() == DialogResult.OK)
+                        if (dialog.ShowDialog(this) == DialogResult.OK)
                         {
                             using (var stream = File.Open(dialog.FileName, FileMode.Create))
                             {
-                                var bytes = cert.Export(X509ContentType.Pfx, IssuerPasswordTextBox.Text);
+                                var bytes = cert.Export(X509ContentType.Pfx, SavePasswordTextBox.Text);
 
                                 stream.Write(bytes, 0, bytes.Length);
                             }

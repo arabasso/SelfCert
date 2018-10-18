@@ -5,10 +5,6 @@
         public T Value { get; set; }
         public string Description { get; set; }
 
-        public SelectItem()
-        {
-        }
-
         public SelectItem(
             T value)
         {

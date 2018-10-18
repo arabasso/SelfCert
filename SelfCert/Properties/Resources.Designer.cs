@@ -61,6 +61,24 @@ namespace SelfCert.Properties {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Files .pfx|*.pfx.
+        /// </summary>
+        internal static string IssuerFileDialogFilter {
+            get {
+                return ResourceManager.GetString("IssuerFileDialogFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Files .pfx|*.pfx.
+        /// </summary>
+        internal static string SaveFileDialogFilter {
+            get {
+                return ResourceManager.GetString("SaveFileDialogFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Self-signed certificate successfully saved.
         /// </summary>
         internal static string SaveMessage {
