@@ -23,12 +23,7 @@ namespace SelfCert
 
             InfoKeySizeComboBox.SelectedIndex = 3;
 
-            var certs = new List<CertSelectItem>(GetCertificates(StoreLocation.CurrentUser));
-
-            certs.AddRange(GetCertificates(StoreLocation.LocalMachine));
-
-            IssuerCertStoreComboBox.DataSource = certs;
-            IssuerCertStoreComboBox.SelectedIndex = 0;
+            LoadCerts();
 
             SaveLocationComboBox.DataSource = Enum.GetValues(typeof(StoreLocation))
                     .OfType<StoreLocation>()
@@ -43,6 +38,16 @@ namespace SelfCert
                 .OrderBy(ob => ob.Description)
                 .ToList();
             SaveStoreComboBox.SelectedIndex = 5;
+        }
+
+        private void LoadCerts()
+        {
+            var certs = new List<CertSelectItem>(GetCertificates(StoreLocation.CurrentUser));
+
+            certs.AddRange(GetCertificates(StoreLocation.LocalMachine));
+
+            IssuerCertStoreComboBox.DataSource = certs;
+            IssuerCertStoreComboBox.SelectedIndex = 0;
         }
 
         private List<CertSelectItem> GetCertificates(
@@ -76,19 +81,21 @@ namespace SelfCert
             {
                 dialog.Filter = Properties.Resources.IssuerFileDialogFilter;
 
-                if (dialog.ShowDialog(this) == DialogResult.OK)
+                if (dialog.ShowDialog(this) == DialogResult.Yes)
                 {
                     IssuerFileTextBox.Text = dialog.FileName;
                 }
             }
         }
 
-        private void EnableCertIssuer(bool flag)
+        private void EnableCertIssuer(
+            bool flag)
         {
             IssuerCertStoreComboBox.Enabled = flag;
         }
 
-        private void EnableFileIssuer(bool flag)
+        private void EnableFileIssuer(
+            bool flag)
         {
             IssuerFileTextBox.Enabled = flag;
             IssuerFileButton.Enabled = flag;
@@ -110,6 +117,8 @@ namespace SelfCert
             object sender,
             EventArgs e)
         {
+            LoadCerts();
+
             EnableCertIssuer(true);
             EnableFileIssuer(false);
         }
@@ -203,7 +212,7 @@ namespace SelfCert
                     {
                         dialog.Filter = Properties.Resources.SaveFileDialogFilter;
 
-                        if (dialog.ShowDialog(this) == DialogResult.OK)
+                        if (dialog.ShowDialog(this) == DialogResult.Yes)
                         {
                             using (var stream = File.Open(dialog.FileName, FileMode.Create))
                             {
