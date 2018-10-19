@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Permissions;
 using System.Windows.Forms;
+using Org.BouncyCastle.Asn1.X509;
 
 namespace SelfCert
 {
@@ -21,6 +22,7 @@ namespace SelfCert
 
             Font = new Font(Font.FontFamily, Font.Size * 1f);
 
+            InfoAlgorithmComboBox.SelectedIndex = 1;
             InfoKeySizeComboBox.SelectedIndex = 3;
 
             LoadCerts();
@@ -81,7 +83,7 @@ namespace SelfCert
             {
                 dialog.Filter = Properties.Resources.IssuerFileDialogFilter;
 
-                if (dialog.ShowDialog(this) == DialogResult.Yes)
+                if (dialog.ShowDialog(this) == DialogResult.OK)
                 {
                     IssuerFileTextBox.Text = dialog.FileName;
                 }
@@ -188,9 +190,10 @@ namespace SelfCert
                     InfoValidFromDatePicker.Value,
                     InfoValidToDatePicker.Value,
                     InfoExportableCheckBox.Checked,
-                    GetIssuer());
+                    GetIssuer(),
+                    GetPurposeIds());
 
-                var cert = builder.Build();
+                var cert = builder.Build(InfoAlgorithmComboBox.SelectedItem + "WITHRSA");
 
                 if (SaveCertStoreRadioButton.Checked)
                 {
@@ -204,6 +207,8 @@ namespace SelfCert
                     store1.Add(cert);
 
                     store1.Close();
+
+                    MessageBox.Show(this, Properties.Resources.SaveMessage);
                 }
 
                 if (SaveFileRadioButton.Checked)
@@ -212,25 +217,57 @@ namespace SelfCert
                     {
                         dialog.Filter = Properties.Resources.SaveFileDialogFilter;
 
-                        if (dialog.ShowDialog(this) == DialogResult.Yes)
+                        if (dialog.ShowDialog(this) == DialogResult.OK)
                         {
                             using (var stream = File.Open(dialog.FileName, FileMode.Create))
                             {
                                 var bytes = cert.Export(X509ContentType.Pfx, SavePasswordTextBox.Text);
 
                                 stream.Write(bytes, 0, bytes.Length);
+
+                                MessageBox.Show(this, Properties.Resources.SaveMessage);
                             }
                         }
                     }
                 }
-
-                MessageBox.Show(this, Properties.Resources.SaveMessage);
             }
 
             catch (Exception exception)
             {
                 MessageBox.Show(this, exception.Message);
             }
+        }
+
+        private List<KeyPurposeID> GetPurposeIds()
+        {
+            var purposeIds = new List<KeyPurposeID>();
+
+            if (InfoPurposeServerAuthCheckBox.Checked)
+            {
+                purposeIds.Add(KeyPurposeID.IdKPServerAuth);
+            }
+
+            if (InfoPurposeClientAuthCheckBox.Checked)
+            {
+                purposeIds.Add(KeyPurposeID.IdKPClientAuth);
+            }
+
+            if (InfoPurposeCodeSignCheckBox.Checked)
+            {
+                purposeIds.Add(KeyPurposeID.IdKPCodeSigning);
+            }
+
+            if (InfoPurposeEmailprotectionCheckBox.Checked)
+            {
+                purposeIds.Add(KeyPurposeID.IdKPEmailProtection);
+            }
+
+            if (InfoPurposeOcspSigningCheckBox.Checked)
+            {
+                purposeIds.Add(KeyPurposeID.IdKPOcspSigning);
+            }
+
+            return purposeIds;
         }
 
         private X509Certificate2 GetIssuer()

@@ -31,8 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalForm));
             this.InfoPanel = new System.Windows.Forms.Panel();
             this.InfoGroupBox = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.InfoSubjectLabel = new System.Windows.Forms.Label();
+            this.InfoTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.InfoExportableCheckBox = new System.Windows.Forms.CheckBox();
             this.InfoSubjectTextBox = new System.Windows.Forms.TextBox();
             this.InfoValidToDatePicker = new System.Windows.Forms.DateTimePicker();
@@ -43,7 +42,7 @@
             this.InfoValidToLabel = new System.Windows.Forms.Label();
             this.IssuerPanel = new System.Windows.Forms.Panel();
             this.IssuerGroupBox = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.IssuerTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.IssuerPasswordTextBox = new System.Windows.Forms.TextBox();
             this.IssuerPasswordLabel = new System.Windows.Forms.Label();
             this.IssuerPathLabel = new System.Windows.Forms.Label();
@@ -55,7 +54,7 @@
             this.IssuerFileRadioButton = new System.Windows.Forms.RadioButton();
             this.SavePanel = new System.Windows.Forms.Panel();
             this.SaveGroupBox = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.SaveTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.SaveCertStoreRadioButton = new System.Windows.Forms.RadioButton();
             this.SavePasswordTextBox = new System.Windows.Forms.TextBox();
             this.SavePasswordLabel = new System.Windows.Forms.Label();
@@ -65,15 +64,24 @@
             this.SaveLocationLabel = new System.Windows.Forms.Label();
             this.SaveLocationComboBox = new System.Windows.Forms.ComboBox();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.InfoPurposeLabel = new System.Windows.Forms.Label();
+            this.InfoPurposeServerAuthCheckBox = new System.Windows.Forms.CheckBox();
+            this.InfoPurposeClientAuthCheckBox = new System.Windows.Forms.CheckBox();
+            this.InfoPurposeCodeSignCheckBox = new System.Windows.Forms.CheckBox();
+            this.InfoPurposeEmailprotectionCheckBox = new System.Windows.Forms.CheckBox();
+            this.InfoSubjectLabel = new System.Windows.Forms.Label();
+            this.InfoAlgorithmLabel = new System.Windows.Forms.Label();
+            this.InfoAlgorithmComboBox = new System.Windows.Forms.ComboBox();
+            this.InfoPurposeOcspSigningCheckBox = new System.Windows.Forms.CheckBox();
             this.InfoPanel.SuspendLayout();
             this.InfoGroupBox.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.InfoTableLayoutPanel.SuspendLayout();
             this.IssuerPanel.SuspendLayout();
             this.IssuerGroupBox.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.IssuerTableLayoutPanel.SuspendLayout();
             this.SavePanel.SuspendLayout();
             this.SaveGroupBox.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.SaveTableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // InfoPanel
@@ -85,28 +93,31 @@
             // InfoGroupBox
             // 
             resources.ApplyResources(this.InfoGroupBox, "InfoGroupBox");
-            this.InfoGroupBox.Controls.Add(this.tableLayoutPanel2);
+            this.InfoGroupBox.Controls.Add(this.InfoTableLayoutPanel);
             this.InfoGroupBox.Name = "InfoGroupBox";
             this.InfoGroupBox.TabStop = false;
             // 
-            // tableLayoutPanel2
+            // InfoTableLayoutPanel
             // 
-            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
-            this.tableLayoutPanel2.Controls.Add(this.InfoSubjectLabel, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.InfoExportableCheckBox, 3, 3);
-            this.tableLayoutPanel2.Controls.Add(this.InfoSubjectTextBox, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.InfoValidToDatePicker, 2, 3);
-            this.tableLayoutPanel2.Controls.Add(this.InfoKeySizeLabel, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.InfoValidFromDatePicker, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.InfoValidFromLabel, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.InfoKeySizeComboBox, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.InfoValidToLabel, 2, 2);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            // 
-            // InfoSubjectLabel
-            // 
-            resources.ApplyResources(this.InfoSubjectLabel, "InfoSubjectLabel");
-            this.InfoSubjectLabel.Name = "InfoSubjectLabel";
+            resources.ApplyResources(this.InfoTableLayoutPanel, "InfoTableLayoutPanel");
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeLabel, 0, 4);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoSubjectLabel, 0, 0);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoExportableCheckBox, 4, 3);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoSubjectTextBox, 0, 1);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoValidToDatePicker, 3, 3);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoKeySizeLabel, 1, 2);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoValidFromDatePicker, 2, 3);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoValidFromLabel, 2, 2);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoKeySizeComboBox, 1, 3);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoValidToLabel, 3, 2);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeServerAuthCheckBox, 0, 5);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeClientAuthCheckBox, 1, 5);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeCodeSignCheckBox, 2, 5);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeEmailprotectionCheckBox, 3, 5);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoAlgorithmLabel, 0, 2);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoAlgorithmComboBox, 0, 3);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeOcspSigningCheckBox, 4, 5);
+            this.InfoTableLayoutPanel.Name = "InfoTableLayoutPanel";
             // 
             // InfoExportableCheckBox
             // 
@@ -116,7 +127,7 @@
             // 
             // InfoSubjectTextBox
             // 
-            this.tableLayoutPanel2.SetColumnSpan(this.InfoSubjectTextBox, 4);
+            this.InfoTableLayoutPanel.SetColumnSpan(this.InfoSubjectTextBox, 5);
             resources.ApplyResources(this.InfoSubjectTextBox, "InfoSubjectTextBox");
             this.InfoSubjectTextBox.Name = "InfoSubjectTextBox";
             // 
@@ -173,23 +184,23 @@
             // IssuerGroupBox
             // 
             resources.ApplyResources(this.IssuerGroupBox, "IssuerGroupBox");
-            this.IssuerGroupBox.Controls.Add(this.tableLayoutPanel3);
+            this.IssuerGroupBox.Controls.Add(this.IssuerTableLayoutPanel);
             this.IssuerGroupBox.Name = "IssuerGroupBox";
             this.IssuerGroupBox.TabStop = false;
             // 
-            // tableLayoutPanel3
+            // IssuerTableLayoutPanel
             // 
-            resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
-            this.tableLayoutPanel3.Controls.Add(this.IssuerPasswordTextBox, 2, 3);
-            this.tableLayoutPanel3.Controls.Add(this.IssuerPasswordLabel, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.IssuerPathLabel, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.IssuerSelfRadioButton, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.IssuerFileButton, 3, 2);
-            this.tableLayoutPanel3.Controls.Add(this.IssuerCertStoreRadioButton, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.IssuerFileTextBox, 2, 2);
-            this.tableLayoutPanel3.Controls.Add(this.IssuerCertStoreComboBox, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.IssuerFileRadioButton, 0, 2);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            resources.ApplyResources(this.IssuerTableLayoutPanel, "IssuerTableLayoutPanel");
+            this.IssuerTableLayoutPanel.Controls.Add(this.IssuerPasswordTextBox, 2, 3);
+            this.IssuerTableLayoutPanel.Controls.Add(this.IssuerPasswordLabel, 1, 3);
+            this.IssuerTableLayoutPanel.Controls.Add(this.IssuerPathLabel, 0, 2);
+            this.IssuerTableLayoutPanel.Controls.Add(this.IssuerSelfRadioButton, 0, 0);
+            this.IssuerTableLayoutPanel.Controls.Add(this.IssuerFileButton, 3, 2);
+            this.IssuerTableLayoutPanel.Controls.Add(this.IssuerCertStoreRadioButton, 0, 1);
+            this.IssuerTableLayoutPanel.Controls.Add(this.IssuerFileTextBox, 2, 2);
+            this.IssuerTableLayoutPanel.Controls.Add(this.IssuerCertStoreComboBox, 1, 1);
+            this.IssuerTableLayoutPanel.Controls.Add(this.IssuerFileRadioButton, 0, 2);
+            this.IssuerTableLayoutPanel.Name = "IssuerTableLayoutPanel";
             // 
             // IssuerPasswordTextBox
             // 
@@ -241,7 +252,7 @@
             // 
             // IssuerCertStoreComboBox
             // 
-            this.tableLayoutPanel3.SetColumnSpan(this.IssuerCertStoreComboBox, 3);
+            this.IssuerTableLayoutPanel.SetColumnSpan(this.IssuerCertStoreComboBox, 3);
             this.IssuerCertStoreComboBox.DisplayMember = "Description";
             resources.ApplyResources(this.IssuerCertStoreComboBox, "IssuerCertStoreComboBox");
             this.IssuerCertStoreComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -264,23 +275,23 @@
             // SaveGroupBox
             // 
             resources.ApplyResources(this.SaveGroupBox, "SaveGroupBox");
-            this.SaveGroupBox.Controls.Add(this.tableLayoutPanel1);
+            this.SaveGroupBox.Controls.Add(this.SaveTableLayoutPanel);
             this.SaveGroupBox.Name = "SaveGroupBox";
             this.SaveGroupBox.TabStop = false;
             // 
-            // tableLayoutPanel1
+            // SaveTableLayoutPanel
             // 
-            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.SaveCertStoreRadioButton, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.SavePasswordTextBox, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.SavePasswordLabel, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.SaveStoreComboBox, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.SaveStoreLabel, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.SaveFileRadioButton, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.SaveLocationLabel, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.SaveLocationComboBox, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.SaveButton, 4, 2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            resources.ApplyResources(this.SaveTableLayoutPanel, "SaveTableLayoutPanel");
+            this.SaveTableLayoutPanel.Controls.Add(this.SaveCertStoreRadioButton, 0, 0);
+            this.SaveTableLayoutPanel.Controls.Add(this.SavePasswordTextBox, 2, 1);
+            this.SaveTableLayoutPanel.Controls.Add(this.SavePasswordLabel, 1, 1);
+            this.SaveTableLayoutPanel.Controls.Add(this.SaveStoreComboBox, 4, 0);
+            this.SaveTableLayoutPanel.Controls.Add(this.SaveStoreLabel, 3, 0);
+            this.SaveTableLayoutPanel.Controls.Add(this.SaveFileRadioButton, 0, 1);
+            this.SaveTableLayoutPanel.Controls.Add(this.SaveLocationLabel, 1, 0);
+            this.SaveTableLayoutPanel.Controls.Add(this.SaveLocationComboBox, 2, 0);
+            this.SaveTableLayoutPanel.Controls.Add(this.SaveButton, 4, 2);
+            this.SaveTableLayoutPanel.Name = "SaveTableLayoutPanel";
             // 
             // SaveCertStoreRadioButton
             // 
@@ -341,11 +352,67 @@
             // 
             // SaveButton
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.SaveButton, 2);
+            this.SaveTableLayoutPanel.SetColumnSpan(this.SaveButton, 2);
             resources.ApplyResources(this.SaveButton, "SaveButton");
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButtonClick);
+            // 
+            // InfoPurposeLabel
+            // 
+            resources.ApplyResources(this.InfoPurposeLabel, "InfoPurposeLabel");
+            this.InfoPurposeLabel.Name = "InfoPurposeLabel";
+            // 
+            // InfoPurposeServerAuthCheckBox
+            // 
+            resources.ApplyResources(this.InfoPurposeServerAuthCheckBox, "InfoPurposeServerAuthCheckBox");
+            this.InfoPurposeServerAuthCheckBox.Name = "InfoPurposeServerAuthCheckBox";
+            this.InfoPurposeServerAuthCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // InfoPurposeClientAuthCheckBox
+            // 
+            resources.ApplyResources(this.InfoPurposeClientAuthCheckBox, "InfoPurposeClientAuthCheckBox");
+            this.InfoPurposeClientAuthCheckBox.Name = "InfoPurposeClientAuthCheckBox";
+            this.InfoPurposeClientAuthCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // InfoPurposeCodeSignCheckBox
+            // 
+            resources.ApplyResources(this.InfoPurposeCodeSignCheckBox, "InfoPurposeCodeSignCheckBox");
+            this.InfoPurposeCodeSignCheckBox.Name = "InfoPurposeCodeSignCheckBox";
+            this.InfoPurposeCodeSignCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // InfoPurposeEmailprotectionCheckBox
+            // 
+            resources.ApplyResources(this.InfoPurposeEmailprotectionCheckBox, "InfoPurposeEmailprotectionCheckBox");
+            this.InfoPurposeEmailprotectionCheckBox.Name = "InfoPurposeEmailprotectionCheckBox";
+            this.InfoPurposeEmailprotectionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // InfoSubjectLabel
+            // 
+            resources.ApplyResources(this.InfoSubjectLabel, "InfoSubjectLabel");
+            this.InfoSubjectLabel.Name = "InfoSubjectLabel";
+            // 
+            // InfoAlgorithmLabel
+            // 
+            resources.ApplyResources(this.InfoAlgorithmLabel, "InfoAlgorithmLabel");
+            this.InfoAlgorithmLabel.Name = "InfoAlgorithmLabel";
+            // 
+            // InfoAlgorithmComboBox
+            // 
+            resources.ApplyResources(this.InfoAlgorithmComboBox, "InfoAlgorithmComboBox");
+            this.InfoAlgorithmComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.InfoAlgorithmComboBox.FormattingEnabled = true;
+            this.InfoAlgorithmComboBox.Items.AddRange(new object[] {
+            resources.GetString("InfoAlgorithmComboBox.Items"),
+            resources.GetString("InfoAlgorithmComboBox.Items1"),
+            resources.GetString("InfoAlgorithmComboBox.Items2")});
+            this.InfoAlgorithmComboBox.Name = "InfoAlgorithmComboBox";
+            // 
+            // InfoPurposeOcspSigningCheckBox
+            // 
+            resources.ApplyResources(this.InfoPurposeOcspSigningCheckBox, "InfoPurposeOcspSigningCheckBox");
+            this.InfoPurposeOcspSigningCheckBox.Name = "InfoPurposeOcspSigningCheckBox";
+            this.InfoPurposeOcspSigningCheckBox.UseVisualStyleBackColor = true;
             // 
             // PrincipalForm
             // 
@@ -354,6 +421,7 @@
             this.Controls.Add(this.SavePanel);
             this.Controls.Add(this.IssuerPanel);
             this.Controls.Add(this.InfoPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "PrincipalForm";
             this.Load += new System.EventHandler(this.PrincipalFormLoad);
@@ -361,20 +429,20 @@
             this.InfoPanel.PerformLayout();
             this.InfoGroupBox.ResumeLayout(false);
             this.InfoGroupBox.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.InfoTableLayoutPanel.ResumeLayout(false);
+            this.InfoTableLayoutPanel.PerformLayout();
             this.IssuerPanel.ResumeLayout(false);
             this.IssuerPanel.PerformLayout();
             this.IssuerGroupBox.ResumeLayout(false);
             this.IssuerGroupBox.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
+            this.IssuerTableLayoutPanel.ResumeLayout(false);
+            this.IssuerTableLayoutPanel.PerformLayout();
             this.SavePanel.ResumeLayout(false);
             this.SavePanel.PerformLayout();
             this.SaveGroupBox.ResumeLayout(false);
             this.SaveGroupBox.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.SaveTableLayoutPanel.ResumeLayout(false);
+            this.SaveTableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,8 +451,7 @@
         #endregion
         private System.Windows.Forms.Panel InfoPanel;
         private System.Windows.Forms.GroupBox InfoGroupBox;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label InfoSubjectLabel;
+        private System.Windows.Forms.TableLayoutPanel InfoTableLayoutPanel;
         private System.Windows.Forms.CheckBox InfoExportableCheckBox;
         private System.Windows.Forms.TextBox InfoSubjectTextBox;
         private System.Windows.Forms.DateTimePicker InfoValidToDatePicker;
@@ -395,7 +462,7 @@
         private System.Windows.Forms.Label InfoValidToLabel;
         private System.Windows.Forms.Panel IssuerPanel;
         private System.Windows.Forms.GroupBox IssuerGroupBox;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel IssuerTableLayoutPanel;
         private System.Windows.Forms.RadioButton IssuerSelfRadioButton;
         private System.Windows.Forms.Button IssuerFileButton;
         private System.Windows.Forms.RadioButton IssuerCertStoreRadioButton;
@@ -404,7 +471,7 @@
         private System.Windows.Forms.RadioButton IssuerFileRadioButton;
         private System.Windows.Forms.Panel SavePanel;
         private System.Windows.Forms.GroupBox SaveGroupBox;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel SaveTableLayoutPanel;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.RadioButton SaveCertStoreRadioButton;
         private System.Windows.Forms.TextBox SavePasswordTextBox;
@@ -417,6 +484,15 @@
         private System.Windows.Forms.Label IssuerPathLabel;
         private System.Windows.Forms.TextBox IssuerPasswordTextBox;
         private System.Windows.Forms.Label IssuerPasswordLabel;
+        private System.Windows.Forms.Label InfoPurposeLabel;
+        private System.Windows.Forms.CheckBox InfoPurposeServerAuthCheckBox;
+        private System.Windows.Forms.CheckBox InfoPurposeClientAuthCheckBox;
+        private System.Windows.Forms.CheckBox InfoPurposeCodeSignCheckBox;
+        private System.Windows.Forms.CheckBox InfoPurposeEmailprotectionCheckBox;
+        private System.Windows.Forms.Label InfoSubjectLabel;
+        private System.Windows.Forms.Label InfoAlgorithmLabel;
+        private System.Windows.Forms.ComboBox InfoAlgorithmComboBox;
+        private System.Windows.Forms.CheckBox InfoPurposeOcspSigningCheckBox;
     }
 }
 

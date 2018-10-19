@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="InfoAlgorithmLabel.Text" xml:space="preserve">
+    <value>Algoritmo</value>
+  </data>
   <data name="InfoExportableCheckBox.Text" xml:space="preserve">
     <value>Exportável</value>
   </data>
@@ -146,6 +149,24 @@
   </data>
   <data name="InfoKeySizeLabel.Text" xml:space="preserve">
     <value>Tamanho da chave</value>
+  </data>
+  <data name="InfoPurposeClientAuthCheckBox.Text" xml:space="preserve">
+    <value>Autenticação do Cliente</value>
+  </data>
+  <data name="InfoPurposeCodeSignCheckBox.Text" xml:space="preserve">
+    <value>Assinatura de Código</value>
+  </data>
+  <data name="InfoPurposeEmailprotectionCheckBox.Text" xml:space="preserve">
+    <value>E-mail Seguro</value>
+  </data>
+  <data name="InfoPurposeLabel.Text" xml:space="preserve">
+    <value>Propósito</value>
+  </data>
+  <data name="InfoPurposeOcspSigningCheckBox.Text" xml:space="preserve">
+    <value>Assinatura OCSP</value>
+  </data>
+  <data name="InfoPurposeServerAuthCheckBox.Text" xml:space="preserve">
+    <value>Autenticação do Servidor</value>
   </data>
   <data name="InfoSubjectLabel.Text" xml:space="preserve">
     <value>Requerente</value>

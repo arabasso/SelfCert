@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using Org.BouncyCastle.Asn1;
@@ -27,6 +30,7 @@ namespace SelfCert
         public DateTime ValidTo { get; }
         public bool Exportable { get; }
         public X509Certificate2 Issuer { get; }
+        public List<KeyPurposeID> PurposeIds { get; }
 
         public class X509NameEx
             : X509Name
@@ -44,7 +48,8 @@ namespace SelfCert
             DateTime validFrom,
             DateTime validTo,
             bool exportable,
-            X509Certificate2 issuer)
+            X509Certificate2 issuer,
+            List<KeyPurposeID> purposeIds)
         {
             Subject = subject;
             KeySize = keySize;
@@ -52,9 +57,11 @@ namespace SelfCert
             ValidTo = validTo;
             Exportable = exportable;
             Issuer = issuer;
+            PurposeIds = purposeIds;
         }
 
-        public X509Certificate2 Build()
+        public X509Certificate2 Build(
+            string algorithm)
         {
             // Generating Random Numbers
             var randomGenerator = new CryptoApiRandomGenerator();
@@ -77,12 +84,19 @@ namespace SelfCert
                 var authorityKeyIdentifier = new AuthorityKeyIdentifierStructure(
                     DotNetUtilities.FromX509Certificate(Issuer));
                 certificateGenerator.AddExtension(
-                    X509Extensions.AuthorityKeyIdentifier.Id, true, authorityKeyIdentifier);
+                    X509Extensions.AuthorityKeyIdentifier.Id, false, authorityKeyIdentifier);
             }
 
             // Basic Constraints - issuer is allowed to be used as intermediate.
             certificateGenerator.AddExtension(
-                X509Extensions.BasicConstraints.Id, false, new BasicConstraints(Exportable));
+                X509Extensions.BasicConstraints.Id, true, new BasicConstraints(Exportable));
+
+            // Extended Key Usage
+            if (PurposeIds.Any())
+            {
+                certificateGenerator.AddExtension(
+                    X509Extensions.ExtendedKeyUsage.Id, true, new ExtendedKeyUsage(PurposeIds));
+            }
 
             // Valid For
             certificateGenerator.SetNotBefore(ValidFrom);
@@ -100,7 +114,7 @@ namespace SelfCert
 
             certificateGenerator.SetPublicKey(subjectKeyPair.Public);
 
-            var factory = new Asn1SignatureFactory("SHA256WithRSA", issuerKeyPair.Private);
+            var factory = new Asn1SignatureFactory(algorithm, issuerKeyPair.Private, random);
 
             // selfsign issuer
 
@@ -108,7 +122,7 @@ namespace SelfCert
 
             // merge into X509Certificate2
             return Exportable
-                ? new X509Certificate2(certificate.GetEncoded(), (string)null, X509KeyStorageFlags.Exportable)
+                ? new X509Certificate2(certificate.GetEncoded(), string.Empty, X509KeyStorageFlags.Exportable | X509KeyStorageFlags.PersistKeySet)
                 {
                     PrivateKey = ConvertToRsaPrivateKey(subjectKeyPair),
                 }
