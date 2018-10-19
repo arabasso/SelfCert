@@ -118,5 +118,17 @@ namespace SelfCert.Properties {
                 this["InfoKeySize"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string InfoFriendlyName {
+            get {
+                return ((string)(this["InfoFriendlyName"]));
+            }
+            set {
+                this["InfoFriendlyName"] = value;
+            }
+        }
     }
 }

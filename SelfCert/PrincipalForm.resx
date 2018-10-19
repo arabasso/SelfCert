@@ -142,7 +142,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="InfoPurposeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 115</value>
+    <value>3, 154</value>
   </data>
   <data name="InfoPurposeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -178,7 +178,7 @@
     <value>NoControl</value>
   </data>
   <data name="InfoSubjectLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>3, 42</value>
   </data>
   <data name="InfoSubjectLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -214,7 +214,7 @@
     <value>NoControl</value>
   </data>
   <data name="InfoExportableCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>521, 88</value>
+    <value>521, 127</value>
   </data>
   <data name="InfoExportableCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 3, 3</value>
@@ -244,7 +244,7 @@
     <value>Fill</value>
   </data>
   <data name="InfoSubjectTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 22</value>
+    <value>3, 61</value>
   </data>
   <data name="InfoSubjectTextBox.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -274,7 +274,7 @@
     <value>Fill</value>
   </data>
   <data name="InfoValidToDatePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>401, 88</value>
+    <value>401, 127</value>
   </data>
   <data name="InfoValidToDatePicker.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 10, 3</value>
@@ -307,7 +307,7 @@
     <value>NoControl</value>
   </data>
   <data name="InfoKeySizeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 69</value>
+    <value>137, 108</value>
   </data>
   <data name="InfoKeySizeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -337,7 +337,7 @@
     <value>Fill</value>
   </data>
   <data name="InfoValidFromDatePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 88</value>
+    <value>281, 127</value>
   </data>
   <data name="InfoValidFromDatePicker.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 10, 3</value>
@@ -370,7 +370,7 @@
     <value>NoControl</value>
   </data>
   <data name="InfoValidFromLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 69</value>
+    <value>281, 108</value>
   </data>
   <data name="InfoValidFromLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 3, 3</value>
@@ -421,7 +421,7 @@
     <value>16384</value>
   </data>
   <data name="InfoKeySizeComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 88</value>
+    <value>137, 127</value>
   </data>
   <data name="InfoKeySizeComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 10, 3</value>
@@ -454,7 +454,7 @@
     <value>NoControl</value>
   </data>
   <data name="InfoValidToLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>401, 69</value>
+    <value>401, 108</value>
   </data>
   <data name="InfoValidToLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 3, 3</value>
@@ -487,7 +487,7 @@
     <value>NoControl</value>
   </data>
   <data name="InfoPurposeServerAuthCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 134</value>
+    <value>3, 173</value>
   </data>
   <data name="InfoPurposeServerAuthCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 17</value>
@@ -520,7 +520,7 @@
     <value>NoControl</value>
   </data>
   <data name="InfoPurposeClientAuthCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 134</value>
+    <value>144, 173</value>
   </data>
   <data name="InfoPurposeClientAuthCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 3, 3</value>
@@ -552,8 +552,11 @@
   <data name="InfoPurposeCodeSignCheckBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="InfoPurposeCodeSignCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="InfoPurposeCodeSignCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 134</value>
+    <value>281, 173</value>
   </data>
   <data name="InfoPurposeCodeSignCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 3, 3</value>
@@ -585,8 +588,11 @@
   <data name="InfoPurposeEmailProtectionCheckBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="InfoPurposeEmailProtectionCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="InfoPurposeEmailProtectionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>401, 134</value>
+    <value>401, 173</value>
   </data>
   <data name="InfoPurposeEmailProtectionCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 3, 3</value>
@@ -618,8 +624,11 @@
   <data name="InfoAlgorithmLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="InfoAlgorithmLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="InfoAlgorithmLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 66</value>
+    <value>3, 105</value>
   </data>
   <data name="InfoAlgorithmLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 19</value>
@@ -658,7 +667,7 @@
     <value>SHA512</value>
   </data>
   <data name="InfoAlgorithmComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 88</value>
+    <value>3, 127</value>
   </data>
   <data name="InfoAlgorithmComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 10, 3</value>
@@ -684,8 +693,11 @@
   <data name="InfoPurposeOcspSigningCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="InfoPurposeOcspSigningCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="InfoPurposeOcspSigningCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>521, 134</value>
+    <value>521, 173</value>
   </data>
   <data name="InfoPurposeOcspSigningCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 3, 3</value>
@@ -711,6 +723,66 @@
   <data name="&gt;&gt;InfoPurposeOcspSigningCheckBox.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <data name="InfoFriendlyNameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="InfoFriendlyNameLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="InfoFriendlyNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="InfoFriendlyNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 13</value>
+  </data>
+  <data name="InfoFriendlyNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="InfoFriendlyNameLabel.Text" xml:space="preserve">
+    <value>Friendly Name</value>
+  </data>
+  <data name="InfoFriendlyNameLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;InfoFriendlyNameLabel.Name" xml:space="preserve">
+    <value>InfoFriendlyNameLabel</value>
+  </data>
+  <data name="&gt;&gt;InfoFriendlyNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;InfoFriendlyNameLabel.Parent" xml:space="preserve">
+    <value>InfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;InfoFriendlyNameLabel.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="InfoFriendlyNameTextBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="InfoFriendlyNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="InfoFriendlyNameTextBox.MaxLength" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="InfoFriendlyNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>505, 20</value>
+  </data>
+  <data name="InfoFriendlyNameTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;InfoFriendlyNameTextBox.Name" xml:space="preserve">
+    <value>InfoFriendlyNameTextBox</value>
+  </data>
+  <data name="&gt;&gt;InfoFriendlyNameTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;InfoFriendlyNameTextBox.Parent" xml:space="preserve">
+    <value>InfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;InfoFriendlyNameTextBox.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
   <data name="InfoTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -718,10 +790,10 @@
     <value>3, 16</value>
   </data>
   <data name="InfoTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="InfoTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>770, 154</value>
+    <value>770, 193</value>
   </data>
   <data name="InfoTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -739,7 +811,7 @@
     <value>0</value>
   </data>
   <data name="InfoTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="InfoPurposeLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoSubjectLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoExportableCheckBox" Row="3" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="InfoSubjectTextBox" Row="1" RowSpan="1" Column="0" ColumnSpan="5" /&gt;&lt;Control Name="InfoValidToDatePicker" Row="3" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="InfoKeySizeLabel" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="InfoValidFromDatePicker" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="InfoValidFromLabel" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="InfoKeySizeComboBox" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="InfoValidToLabel" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeServerAuthCheckBox" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeClientAuthCheckBox" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeCodeSignCheckBox" Row="5" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeEmailProtectionCheckBox" Row="5" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="InfoAlgorithmLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoAlgorithmComboBox" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeOcspSigningCheckBox" Row="5" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="InfoPurposeLabel" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoSubjectLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoExportableCheckBox" Row="5" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="InfoSubjectTextBox" Row="3" RowSpan="1" Column="0" ColumnSpan="5" /&gt;&lt;Control Name="InfoValidToDatePicker" Row="5" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="InfoKeySizeLabel" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="InfoValidFromDatePicker" Row="5" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="InfoValidFromLabel" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="InfoKeySizeComboBox" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="InfoValidToLabel" Row="4" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeServerAuthCheckBox" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeClientAuthCheckBox" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeCodeSignCheckBox" Row="7" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeEmailProtectionCheckBox" Row="7" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="InfoAlgorithmLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoAlgorithmComboBox" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeOcspSigningCheckBox" Row="7" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="InfoFriendlyNameLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoFriendlyNameTextBox" Row="1" RowSpan="1" Column="0" ColumnSpan="4" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,20,AutoSize,20,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="InfoGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -748,7 +820,7 @@
     <value>10, 10</value>
   </data>
   <data name="InfoGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 173</value>
+    <value>776, 212</value>
   </data>
   <data name="InfoGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -781,7 +853,7 @@
     <value>10, 10, 10, 0</value>
   </data>
   <data name="InfoPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>796, 183</value>
+    <value>796, 222</value>
   </data>
   <data name="InfoPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1192,7 +1264,7 @@
     <value>Top</value>
   </data>
   <data name="IssuerPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 186</value>
+    <value>3, 225</value>
   </data>
   <data name="IssuerPanel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 10, 10, 0</value>
@@ -1600,7 +1672,7 @@
     <value>Top</value>
   </data>
   <data name="SavePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 320</value>
+    <value>3, 359</value>
   </data>
   <data name="SavePanel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 10, 10, 10</value>

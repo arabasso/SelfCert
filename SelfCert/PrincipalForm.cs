@@ -174,6 +174,7 @@ namespace SelfCert
 
             Size = new Size(Size.Width, 0);
 
+            InfoFriendlyNameTextBox.Text = Properties.Settings.Default.InfoFriendlyName;
             InfoSubjectTextBox.Text = Properties.Settings.Default.InfoSubject;
 
             InfoAlgorithmComboBox.SelectedIndex = Properties.Settings.Default.InfoAlgorithm;
@@ -193,6 +194,7 @@ namespace SelfCert
             try
             {
                 var builder = new X509Certificate2Builder(
+                    InfoFriendlyNameTextBox.Text,
                     InfoSubjectTextBox.Text,
                     Convert.ToInt32(InfoKeySizeComboBox.SelectedItem),
                     InfoValidFromDatePicker.Value,
@@ -294,6 +296,7 @@ namespace SelfCert
             object sender,
             FormClosingEventArgs e)
         {
+            Properties.Settings.Default.InfoFriendlyName = InfoFriendlyNameTextBox.Text;
             Properties.Settings.Default.InfoSubject = InfoSubjectTextBox.Text;
 
             Properties.Settings.Default.InfoAlgorithm = InfoAlgorithmComboBox.SelectedIndex;

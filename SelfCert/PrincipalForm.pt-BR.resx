@@ -123,6 +123,9 @@
   <data name="InfoExportableCheckBox.Text" xml:space="preserve">
     <value>Exportável</value>
   </data>
+  <data name="InfoFriendlyNameLabel.Text" xml:space="preserve">
+    <value>Nome Amigável</value>
+  </data>
   <data name="InfoGroupBox.Text" xml:space="preserve">
     <value>Informações</value>
   </data>

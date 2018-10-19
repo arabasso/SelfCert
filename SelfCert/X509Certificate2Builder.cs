@@ -24,6 +24,7 @@ namespace SelfCert
 {
     public class X509Certificate2Builder
     {
+        public string FriendlyName { get; }
         public string Subject { get; }
         public int KeySize { get; }
         public DateTime ValidFrom { get; }
@@ -32,7 +33,18 @@ namespace SelfCert
         public X509Certificate2 Issuer { get; }
         public List<KeyPurposeID> PurposeIds { get; }
 
+        public class X509NameEx
+            : X509Name
+        {
+            public X509NameEx(
+                string subject)
+                : base(subject.Replace("S=","ST="))
+            {
+            }
+        }
+
         public X509Certificate2Builder(
+            string friendlyName,
             string subject,
             int keySize,
             DateTime validFrom,
@@ -41,6 +53,7 @@ namespace SelfCert
             X509Certificate2 issuer,
             List<KeyPurposeID> purposeIds)
         {
+            FriendlyName = friendlyName;
             Subject = subject;
             KeySize = keySize;
             ValidFrom = validFrom;
@@ -65,8 +78,8 @@ namespace SelfCert
             certificateGenerator.SetSerialNumber(serialNumber);
 
             // Issuer and Subject Name
-            certificateGenerator.SetIssuerDN(new X509Name(Issuer?.Subject ?? Subject));
-            certificateGenerator.SetSubjectDN(new X509Name(Subject));
+            certificateGenerator.SetIssuerDN(new X509NameEx(Issuer?.Subject ?? Subject));
+            certificateGenerator.SetSubjectDN(new X509NameEx(Subject));
 
             // Authority Key Identifier
             if (Issuer != null)
@@ -115,10 +128,12 @@ namespace SelfCert
                 ? new X509Certificate2(certificate.GetEncoded(), string.Empty, X509KeyStorageFlags.Exportable | X509KeyStorageFlags.PersistKeySet)
                 {
                     PrivateKey = ConvertToRsaPrivateKey(subjectKeyPair),
+                    FriendlyName = FriendlyName
                 }
                 : new X509Certificate2(certificate.GetEncoded())
                 {
                     PrivateKey = ConvertToRsaPrivateKey(subjectKeyPair),
+                    FriendlyName = FriendlyName
                 };
         }
 
