@@ -579,37 +579,37 @@
   <data name="&gt;&gt;InfoPurposeCodeSignCheckBox.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="InfoPurposeEmailprotectionCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="InfoPurposeEmailProtectionCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="InfoPurposeEmailprotectionCheckBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="InfoPurposeEmailProtectionCheckBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="InfoPurposeEmailprotectionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="InfoPurposeEmailProtectionCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>401, 134</value>
   </data>
-  <data name="InfoPurposeEmailprotectionCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="InfoPurposeEmailProtectionCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 3, 3</value>
   </data>
-  <data name="InfoPurposeEmailprotectionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="InfoPurposeEmailProtectionCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 17</value>
   </data>
-  <data name="InfoPurposeEmailprotectionCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="InfoPurposeEmailProtectionCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="InfoPurposeEmailprotectionCheckBox.Text" xml:space="preserve">
+  <data name="InfoPurposeEmailProtectionCheckBox.Text" xml:space="preserve">
     <value>E-mail protection</value>
   </data>
-  <data name="&gt;&gt;InfoPurposeEmailprotectionCheckBox.Name" xml:space="preserve">
-    <value>InfoPurposeEmailprotectionCheckBox</value>
+  <data name="&gt;&gt;InfoPurposeEmailProtectionCheckBox.Name" xml:space="preserve">
+    <value>InfoPurposeEmailProtectionCheckBox</value>
   </data>
-  <data name="&gt;&gt;InfoPurposeEmailprotectionCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;InfoPurposeEmailProtectionCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;InfoPurposeEmailprotectionCheckBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;InfoPurposeEmailProtectionCheckBox.Parent" xml:space="preserve">
     <value>InfoTableLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;InfoPurposeEmailprotectionCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;InfoPurposeEmailProtectionCheckBox.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
   <data name="InfoAlgorithmLabel.AutoSize" type="System.Boolean, mscorlib">
@@ -739,7 +739,7 @@
     <value>0</value>
   </data>
   <data name="InfoTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="InfoPurposeLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoSubjectLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoExportableCheckBox" Row="3" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="InfoSubjectTextBox" Row="1" RowSpan="1" Column="0" ColumnSpan="5" /&gt;&lt;Control Name="InfoValidToDatePicker" Row="3" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="InfoKeySizeLabel" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="InfoValidFromDatePicker" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="InfoValidFromLabel" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="InfoKeySizeComboBox" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="InfoValidToLabel" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeServerAuthCheckBox" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeClientAuthCheckBox" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeCodeSignCheckBox" Row="5" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeEmailprotectionCheckBox" Row="5" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="InfoAlgorithmLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoAlgorithmComboBox" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeOcspSigningCheckBox" Row="5" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="InfoPurposeLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoSubjectLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoExportableCheckBox" Row="3" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="InfoSubjectTextBox" Row="1" RowSpan="1" Column="0" ColumnSpan="5" /&gt;&lt;Control Name="InfoValidToDatePicker" Row="3" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="InfoKeySizeLabel" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="InfoValidFromDatePicker" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="InfoValidFromLabel" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="InfoKeySizeComboBox" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="InfoValidToLabel" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeServerAuthCheckBox" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeClientAuthCheckBox" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeCodeSignCheckBox" Row="5" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeEmailProtectionCheckBox" Row="5" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="InfoAlgorithmLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoAlgorithmComboBox" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="InfoPurposeOcspSigningCheckBox" Row="5" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="InfoGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>

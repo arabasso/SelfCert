@@ -32,6 +32,8 @@
             this.InfoPanel = new System.Windows.Forms.Panel();
             this.InfoGroupBox = new System.Windows.Forms.GroupBox();
             this.InfoTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.InfoPurposeLabel = new System.Windows.Forms.Label();
+            this.InfoSubjectLabel = new System.Windows.Forms.Label();
             this.InfoExportableCheckBox = new System.Windows.Forms.CheckBox();
             this.InfoSubjectTextBox = new System.Windows.Forms.TextBox();
             this.InfoValidToDatePicker = new System.Windows.Forms.DateTimePicker();
@@ -40,6 +42,13 @@
             this.InfoValidFromLabel = new System.Windows.Forms.Label();
             this.InfoKeySizeComboBox = new System.Windows.Forms.ComboBox();
             this.InfoValidToLabel = new System.Windows.Forms.Label();
+            this.InfoPurposeServerAuthCheckBox = new System.Windows.Forms.CheckBox();
+            this.InfoPurposeClientAuthCheckBox = new System.Windows.Forms.CheckBox();
+            this.InfoPurposeCodeSignCheckBox = new System.Windows.Forms.CheckBox();
+            this.InfoPurposeEmailProtectionCheckBox = new System.Windows.Forms.CheckBox();
+            this.InfoAlgorithmLabel = new System.Windows.Forms.Label();
+            this.InfoAlgorithmComboBox = new System.Windows.Forms.ComboBox();
+            this.InfoPurposeOcspSigningCheckBox = new System.Windows.Forms.CheckBox();
             this.IssuerPanel = new System.Windows.Forms.Panel();
             this.IssuerGroupBox = new System.Windows.Forms.GroupBox();
             this.IssuerTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -64,15 +73,6 @@
             this.SaveLocationLabel = new System.Windows.Forms.Label();
             this.SaveLocationComboBox = new System.Windows.Forms.ComboBox();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.InfoPurposeLabel = new System.Windows.Forms.Label();
-            this.InfoPurposeServerAuthCheckBox = new System.Windows.Forms.CheckBox();
-            this.InfoPurposeClientAuthCheckBox = new System.Windows.Forms.CheckBox();
-            this.InfoPurposeCodeSignCheckBox = new System.Windows.Forms.CheckBox();
-            this.InfoPurposeEmailprotectionCheckBox = new System.Windows.Forms.CheckBox();
-            this.InfoSubjectLabel = new System.Windows.Forms.Label();
-            this.InfoAlgorithmLabel = new System.Windows.Forms.Label();
-            this.InfoAlgorithmComboBox = new System.Windows.Forms.ComboBox();
-            this.InfoPurposeOcspSigningCheckBox = new System.Windows.Forms.CheckBox();
             this.InfoPanel.SuspendLayout();
             this.InfoGroupBox.SuspendLayout();
             this.InfoTableLayoutPanel.SuspendLayout();
@@ -113,11 +113,21 @@
             this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeServerAuthCheckBox, 0, 5);
             this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeClientAuthCheckBox, 1, 5);
             this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeCodeSignCheckBox, 2, 5);
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeEmailprotectionCheckBox, 3, 5);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeEmailProtectionCheckBox, 3, 5);
             this.InfoTableLayoutPanel.Controls.Add(this.InfoAlgorithmLabel, 0, 2);
             this.InfoTableLayoutPanel.Controls.Add(this.InfoAlgorithmComboBox, 0, 3);
             this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeOcspSigningCheckBox, 4, 5);
             this.InfoTableLayoutPanel.Name = "InfoTableLayoutPanel";
+            // 
+            // InfoPurposeLabel
+            // 
+            resources.ApplyResources(this.InfoPurposeLabel, "InfoPurposeLabel");
+            this.InfoPurposeLabel.Name = "InfoPurposeLabel";
+            // 
+            // InfoSubjectLabel
+            // 
+            resources.ApplyResources(this.InfoSubjectLabel, "InfoSubjectLabel");
+            this.InfoSubjectLabel.Name = "InfoSubjectLabel";
             // 
             // InfoExportableCheckBox
             // 
@@ -174,6 +184,52 @@
             // 
             resources.ApplyResources(this.InfoValidToLabel, "InfoValidToLabel");
             this.InfoValidToLabel.Name = "InfoValidToLabel";
+            // 
+            // InfoPurposeServerAuthCheckBox
+            // 
+            resources.ApplyResources(this.InfoPurposeServerAuthCheckBox, "InfoPurposeServerAuthCheckBox");
+            this.InfoPurposeServerAuthCheckBox.Name = "InfoPurposeServerAuthCheckBox";
+            this.InfoPurposeServerAuthCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // InfoPurposeClientAuthCheckBox
+            // 
+            resources.ApplyResources(this.InfoPurposeClientAuthCheckBox, "InfoPurposeClientAuthCheckBox");
+            this.InfoPurposeClientAuthCheckBox.Name = "InfoPurposeClientAuthCheckBox";
+            this.InfoPurposeClientAuthCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // InfoPurposeCodeSignCheckBox
+            // 
+            resources.ApplyResources(this.InfoPurposeCodeSignCheckBox, "InfoPurposeCodeSignCheckBox");
+            this.InfoPurposeCodeSignCheckBox.Name = "InfoPurposeCodeSignCheckBox";
+            this.InfoPurposeCodeSignCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // InfoPurposeEmailProtectionCheckBox
+            // 
+            resources.ApplyResources(this.InfoPurposeEmailProtectionCheckBox, "InfoPurposeEmailProtectionCheckBox");
+            this.InfoPurposeEmailProtectionCheckBox.Name = "InfoPurposeEmailProtectionCheckBox";
+            this.InfoPurposeEmailProtectionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // InfoAlgorithmLabel
+            // 
+            resources.ApplyResources(this.InfoAlgorithmLabel, "InfoAlgorithmLabel");
+            this.InfoAlgorithmLabel.Name = "InfoAlgorithmLabel";
+            // 
+            // InfoAlgorithmComboBox
+            // 
+            resources.ApplyResources(this.InfoAlgorithmComboBox, "InfoAlgorithmComboBox");
+            this.InfoAlgorithmComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.InfoAlgorithmComboBox.FormattingEnabled = true;
+            this.InfoAlgorithmComboBox.Items.AddRange(new object[] {
+            resources.GetString("InfoAlgorithmComboBox.Items"),
+            resources.GetString("InfoAlgorithmComboBox.Items1"),
+            resources.GetString("InfoAlgorithmComboBox.Items2")});
+            this.InfoAlgorithmComboBox.Name = "InfoAlgorithmComboBox";
+            // 
+            // InfoPurposeOcspSigningCheckBox
+            // 
+            resources.ApplyResources(this.InfoPurposeOcspSigningCheckBox, "InfoPurposeOcspSigningCheckBox");
+            this.InfoPurposeOcspSigningCheckBox.Name = "InfoPurposeOcspSigningCheckBox";
+            this.InfoPurposeOcspSigningCheckBox.UseVisualStyleBackColor = true;
             // 
             // IssuerPanel
             // 
@@ -358,62 +414,6 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButtonClick);
             // 
-            // InfoPurposeLabel
-            // 
-            resources.ApplyResources(this.InfoPurposeLabel, "InfoPurposeLabel");
-            this.InfoPurposeLabel.Name = "InfoPurposeLabel";
-            // 
-            // InfoPurposeServerAuthCheckBox
-            // 
-            resources.ApplyResources(this.InfoPurposeServerAuthCheckBox, "InfoPurposeServerAuthCheckBox");
-            this.InfoPurposeServerAuthCheckBox.Name = "InfoPurposeServerAuthCheckBox";
-            this.InfoPurposeServerAuthCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // InfoPurposeClientAuthCheckBox
-            // 
-            resources.ApplyResources(this.InfoPurposeClientAuthCheckBox, "InfoPurposeClientAuthCheckBox");
-            this.InfoPurposeClientAuthCheckBox.Name = "InfoPurposeClientAuthCheckBox";
-            this.InfoPurposeClientAuthCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // InfoPurposeCodeSignCheckBox
-            // 
-            resources.ApplyResources(this.InfoPurposeCodeSignCheckBox, "InfoPurposeCodeSignCheckBox");
-            this.InfoPurposeCodeSignCheckBox.Name = "InfoPurposeCodeSignCheckBox";
-            this.InfoPurposeCodeSignCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // InfoPurposeEmailprotectionCheckBox
-            // 
-            resources.ApplyResources(this.InfoPurposeEmailprotectionCheckBox, "InfoPurposeEmailprotectionCheckBox");
-            this.InfoPurposeEmailprotectionCheckBox.Name = "InfoPurposeEmailprotectionCheckBox";
-            this.InfoPurposeEmailprotectionCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // InfoSubjectLabel
-            // 
-            resources.ApplyResources(this.InfoSubjectLabel, "InfoSubjectLabel");
-            this.InfoSubjectLabel.Name = "InfoSubjectLabel";
-            // 
-            // InfoAlgorithmLabel
-            // 
-            resources.ApplyResources(this.InfoAlgorithmLabel, "InfoAlgorithmLabel");
-            this.InfoAlgorithmLabel.Name = "InfoAlgorithmLabel";
-            // 
-            // InfoAlgorithmComboBox
-            // 
-            resources.ApplyResources(this.InfoAlgorithmComboBox, "InfoAlgorithmComboBox");
-            this.InfoAlgorithmComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.InfoAlgorithmComboBox.FormattingEnabled = true;
-            this.InfoAlgorithmComboBox.Items.AddRange(new object[] {
-            resources.GetString("InfoAlgorithmComboBox.Items"),
-            resources.GetString("InfoAlgorithmComboBox.Items1"),
-            resources.GetString("InfoAlgorithmComboBox.Items2")});
-            this.InfoAlgorithmComboBox.Name = "InfoAlgorithmComboBox";
-            // 
-            // InfoPurposeOcspSigningCheckBox
-            // 
-            resources.ApplyResources(this.InfoPurposeOcspSigningCheckBox, "InfoPurposeOcspSigningCheckBox");
-            this.InfoPurposeOcspSigningCheckBox.Name = "InfoPurposeOcspSigningCheckBox";
-            this.InfoPurposeOcspSigningCheckBox.UseVisualStyleBackColor = true;
-            // 
             // PrincipalForm
             // 
             resources.ApplyResources(this, "$this");
@@ -424,6 +424,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "PrincipalForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PrincipalFormClosing);
             this.Load += new System.EventHandler(this.PrincipalFormLoad);
             this.InfoPanel.ResumeLayout(false);
             this.InfoPanel.PerformLayout();
@@ -488,7 +489,7 @@
         private System.Windows.Forms.CheckBox InfoPurposeServerAuthCheckBox;
         private System.Windows.Forms.CheckBox InfoPurposeClientAuthCheckBox;
         private System.Windows.Forms.CheckBox InfoPurposeCodeSignCheckBox;
-        private System.Windows.Forms.CheckBox InfoPurposeEmailprotectionCheckBox;
+        private System.Windows.Forms.CheckBox InfoPurposeEmailProtectionCheckBox;
         private System.Windows.Forms.Label InfoSubjectLabel;
         private System.Windows.Forms.Label InfoAlgorithmLabel;
         private System.Windows.Forms.ComboBox InfoAlgorithmComboBox;

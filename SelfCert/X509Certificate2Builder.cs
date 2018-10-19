@@ -32,16 +32,6 @@ namespace SelfCert
         public X509Certificate2 Issuer { get; }
         public List<KeyPurposeID> PurposeIds { get; }
 
-        public class X509NameEx
-            : X509Name
-        {
-            public X509NameEx(
-                string subject)
-                : base(subject.Replace("S=","ST="))
-            {
-            }
-        }
-
         public X509Certificate2Builder(
             string subject,
             int keySize,
@@ -75,8 +65,8 @@ namespace SelfCert
             certificateGenerator.SetSerialNumber(serialNumber);
 
             // Issuer and Subject Name
-            certificateGenerator.SetIssuerDN(new X509NameEx(Issuer?.Subject ?? Subject));
-            certificateGenerator.SetSubjectDN(new X509NameEx(Subject));
+            certificateGenerator.SetIssuerDN(new X509Name(Issuer?.Subject ?? Subject));
+            certificateGenerator.SetSubjectDN(new X509Name(Subject));
 
             // Authority Key Identifier
             if (Issuer != null)

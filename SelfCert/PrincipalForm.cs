@@ -22,9 +22,6 @@ namespace SelfCert
 
             Font = new Font(Font.FontFamily, Font.Size * 1f);
 
-            InfoAlgorithmComboBox.SelectedIndex = 1;
-            InfoKeySizeComboBox.SelectedIndex = 3;
-
             LoadCerts();
 
             SaveLocationComboBox.DataSource = Enum.GetValues(typeof(StoreLocation))
@@ -176,6 +173,17 @@ namespace SelfCert
             InfoValidToDatePicker.Value = dateNow.AddDays(365);
 
             Size = new Size(Size.Width, 0);
+
+            InfoSubjectTextBox.Text = Properties.Settings.Default.InfoSubject;
+
+            InfoAlgorithmComboBox.SelectedIndex = Properties.Settings.Default.InfoAlgorithm;
+            InfoKeySizeComboBox.SelectedIndex = Properties.Settings.Default.InfoKeySize;
+
+            InfoPurposeServerAuthCheckBox.Checked = Properties.Settings.Default.InfoPurposeServerAuth;
+            InfoPurposeClientAuthCheckBox.Checked = Properties.Settings.Default.InfoPurposeClientAuth;
+            InfoPurposeCodeSignCheckBox.Checked = Properties.Settings.Default.InfoPurposeCodeSign;
+            InfoPurposeEmailProtectionCheckBox.Checked = Properties.Settings.Default.InfoPurposeEmailProtection;
+            InfoPurposeOcspSigningCheckBox.Checked = Properties.Settings.Default.InfoPurposeOcspSigning;
         }
 
         private void SaveButtonClick(
@@ -257,7 +265,7 @@ namespace SelfCert
                 purposeIds.Add(KeyPurposeID.IdKPCodeSigning);
             }
 
-            if (InfoPurposeEmailprotectionCheckBox.Checked)
+            if (InfoPurposeEmailProtectionCheckBox.Checked)
             {
                 purposeIds.Add(KeyPurposeID.IdKPEmailProtection);
             }
@@ -280,6 +288,24 @@ namespace SelfCert
             return IssuerFileRadioButton.Checked
                 ? new X509Certificate2(IssuerFileTextBox.Text, IssuerPasswordTextBox.Text, X509KeyStorageFlags.Exportable)
                 : null;
+        }
+
+        private void PrincipalFormClosing(
+            object sender,
+            FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.InfoSubject = InfoSubjectTextBox.Text;
+
+            Properties.Settings.Default.InfoAlgorithm = InfoAlgorithmComboBox.SelectedIndex;
+            Properties.Settings.Default.InfoKeySize = InfoKeySizeComboBox.SelectedIndex;
+
+            Properties.Settings.Default.InfoPurposeServerAuth = InfoPurposeServerAuthCheckBox.Checked;
+            Properties.Settings.Default.InfoPurposeClientAuth = InfoPurposeClientAuthCheckBox.Checked;
+            Properties.Settings.Default.InfoPurposeCodeSign = InfoPurposeCodeSignCheckBox.Checked;
+            Properties.Settings.Default.InfoPurposeEmailProtection = InfoPurposeEmailProtectionCheckBox.Checked;
+            Properties.Settings.Default.InfoPurposeOcspSigning = InfoPurposeOcspSigningCheckBox.Checked;
+
+            Properties.Settings.Default.Save();
         }
     }
 }

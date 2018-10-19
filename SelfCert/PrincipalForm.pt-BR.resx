@@ -156,7 +156,7 @@
   <data name="InfoPurposeCodeSignCheckBox.Text" xml:space="preserve">
     <value>Assinatura de Código</value>
   </data>
-  <data name="InfoPurposeEmailprotectionCheckBox.Text" xml:space="preserve">
+  <data name="InfoPurposeEmailProtectionCheckBox.Text" xml:space="preserve">
     <value>E-mail Seguro</value>
   </data>
   <data name="InfoPurposeLabel.Text" xml:space="preserve">
