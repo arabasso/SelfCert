@@ -32,6 +32,7 @@ namespace SelfCert
         public bool Exportable { get; }
         public X509Certificate2 Issuer { get; }
         public List<KeyPurposeID> PurposeIds { get; }
+        public GeneralNames GeneralNames { get; set; }
 
         public class X509NameEx
             : X509Name
@@ -117,6 +118,11 @@ namespace SelfCert
 
             certificateGenerator.SetPublicKey(subjectKeyPair.Public);
 
+            if (GeneralNames != null)
+            {
+                certificateGenerator.AddExtension(X509Extensions.SubjectAlternativeName, false, GeneralNames);
+            }
+
             var factory = new Asn1SignatureFactory(algorithm, issuerKeyPair.Private, random);
 
             // selfsign issuer
@@ -128,7 +134,7 @@ namespace SelfCert
                 ? new X509Certificate2(certificate.GetEncoded(), string.Empty, X509KeyStorageFlags.Exportable | X509KeyStorageFlags.PersistKeySet)
                 {
                     PrivateKey = ConvertToRsaPrivateKey(subjectKeyPair),
-                    FriendlyName = FriendlyName
+                    FriendlyName = FriendlyName,
                 }
                 : new X509Certificate2(certificate.GetEncoded())
                 {

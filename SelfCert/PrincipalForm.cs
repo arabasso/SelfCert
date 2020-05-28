@@ -5,7 +5,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
-using System.Security.Permissions;
 using System.Windows.Forms;
 using Org.BouncyCastle.Asn1.X509;
 
@@ -187,6 +186,20 @@ namespace SelfCert
             InfoPurposeOcspSigningCheckBox.Checked = Properties.Settings.Default.InfoPurposeOcspSigning;
         }
 
+        private static readonly Dictionary<string, int>
+            NamesDictionary = new Dictionary<string, int>
+            {
+                { "OTHERNAME", GeneralName.OtherName },
+                { "RFC822NAME", GeneralName.Rfc822Name },
+                { "DNSNAME", GeneralName.DnsName },
+                { "X400ADDRESS", GeneralName.X400Address },
+                { "DIRECTORYNAME", GeneralName.DirectoryName },
+                { "EDIPARTYNAME", GeneralName.EdiPartyName },
+                { "UNIFORMRESOURCEIDENTIFIER", GeneralName.UniformResourceIdentifier },
+                { "IPADDRESS", GeneralName.IPAddress },
+                { "REGISTEREDID", GeneralName.RegisteredID },
+            };
+
         private void SaveButtonClick(
             object sender,
             EventArgs e)
@@ -202,6 +215,21 @@ namespace SelfCert
                     InfoExportableCheckBox.Checked,
                     GetIssuer(),
                     GetPurposeIds());
+
+                var subjectAlternativeName = SubjectAlternativeNameTextBox.Text.Trim();
+
+                if (!string.IsNullOrEmpty(subjectAlternativeName))
+                {
+                    var names = subjectAlternativeName.Split(',')
+                        .Select(s => s.Split('='))
+                        .Select(s => new GeneralName(NamesDictionary[s[0].ToUpper()], s[1]))
+                        .ToArray();
+
+                    if (names.Length > 0)
+                    {
+                        builder.GeneralNames = new GeneralNames(names);
+                    }
+                }
 
                 var cert = builder.Build(InfoAlgorithmComboBox.SelectedItem + "WITHRSA");
 

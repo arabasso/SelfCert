@@ -231,4 +231,7 @@
   <data name="SaveStoreLabel.Text" xml:space="preserve">
     <value>Repositório</value>
   </data>
+  <data name="SubjectAlternativeNameLabel.Text" xml:space="preserve">
+    <value>Nomes Alternativos do Requerente</value>
+  </data>
 </root>

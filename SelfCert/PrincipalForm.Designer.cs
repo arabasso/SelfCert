@@ -49,6 +49,8 @@
             this.InfoAlgorithmLabel = new System.Windows.Forms.Label();
             this.InfoAlgorithmComboBox = new System.Windows.Forms.ComboBox();
             this.InfoPurposeOcspSigningCheckBox = new System.Windows.Forms.CheckBox();
+            this.InfoFriendlyNameLabel = new System.Windows.Forms.Label();
+            this.InfoFriendlyNameTextBox = new System.Windows.Forms.TextBox();
             this.IssuerPanel = new System.Windows.Forms.Panel();
             this.IssuerGroupBox = new System.Windows.Forms.GroupBox();
             this.IssuerTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -73,8 +75,8 @@
             this.SaveLocationLabel = new System.Windows.Forms.Label();
             this.SaveLocationComboBox = new System.Windows.Forms.ComboBox();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.InfoFriendlyNameLabel = new System.Windows.Forms.Label();
-            this.InfoFriendlyNameTextBox = new System.Windows.Forms.TextBox();
+            this.SubjectAlternativeNameLabel = new System.Windows.Forms.Label();
+            this.SubjectAlternativeNameTextBox = new System.Windows.Forms.TextBox();
             this.InfoPanel.SuspendLayout();
             this.InfoGroupBox.SuspendLayout();
             this.InfoTableLayoutPanel.SuspendLayout();
@@ -102,25 +104,27 @@
             // InfoTableLayoutPanel
             // 
             resources.ApplyResources(this.InfoTableLayoutPanel, "InfoTableLayoutPanel");
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeLabel, 0, 6);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeLabel, 0, 8);
             this.InfoTableLayoutPanel.Controls.Add(this.InfoSubjectLabel, 0, 2);
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoExportableCheckBox, 4, 5);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoExportableCheckBox, 4, 7);
             this.InfoTableLayoutPanel.Controls.Add(this.InfoSubjectTextBox, 0, 3);
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoValidToDatePicker, 3, 5);
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoKeySizeLabel, 1, 4);
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoValidFromDatePicker, 2, 5);
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoValidFromLabel, 2, 4);
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoKeySizeComboBox, 1, 5);
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoValidToLabel, 3, 4);
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeServerAuthCheckBox, 0, 7);
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeClientAuthCheckBox, 1, 7);
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeCodeSignCheckBox, 2, 7);
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeEmailProtectionCheckBox, 3, 7);
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoAlgorithmLabel, 0, 4);
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoAlgorithmComboBox, 0, 5);
-            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeOcspSigningCheckBox, 4, 7);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoValidToDatePicker, 3, 7);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoKeySizeLabel, 1, 6);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoValidFromDatePicker, 2, 7);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoValidFromLabel, 2, 6);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoKeySizeComboBox, 1, 7);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoValidToLabel, 3, 6);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeServerAuthCheckBox, 0, 9);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeClientAuthCheckBox, 1, 9);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeCodeSignCheckBox, 2, 9);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeEmailProtectionCheckBox, 3, 9);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoAlgorithmLabel, 0, 6);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoAlgorithmComboBox, 0, 7);
+            this.InfoTableLayoutPanel.Controls.Add(this.InfoPurposeOcspSigningCheckBox, 4, 9);
             this.InfoTableLayoutPanel.Controls.Add(this.InfoFriendlyNameLabel, 0, 0);
             this.InfoTableLayoutPanel.Controls.Add(this.InfoFriendlyNameTextBox, 0, 1);
+            this.InfoTableLayoutPanel.Controls.Add(this.SubjectAlternativeNameLabel, 0, 4);
+            this.InfoTableLayoutPanel.Controls.Add(this.SubjectAlternativeNameTextBox, 0, 5);
             this.InfoTableLayoutPanel.Name = "InfoTableLayoutPanel";
             // 
             // InfoPurposeLabel
@@ -234,6 +238,17 @@
             resources.ApplyResources(this.InfoPurposeOcspSigningCheckBox, "InfoPurposeOcspSigningCheckBox");
             this.InfoPurposeOcspSigningCheckBox.Name = "InfoPurposeOcspSigningCheckBox";
             this.InfoPurposeOcspSigningCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // InfoFriendlyNameLabel
+            // 
+            resources.ApplyResources(this.InfoFriendlyNameLabel, "InfoFriendlyNameLabel");
+            this.InfoFriendlyNameLabel.Name = "InfoFriendlyNameLabel";
+            // 
+            // InfoFriendlyNameTextBox
+            // 
+            this.InfoTableLayoutPanel.SetColumnSpan(this.InfoFriendlyNameTextBox, 4);
+            resources.ApplyResources(this.InfoFriendlyNameTextBox, "InfoFriendlyNameTextBox");
+            this.InfoFriendlyNameTextBox.Name = "InfoFriendlyNameTextBox";
             // 
             // IssuerPanel
             // 
@@ -418,16 +433,16 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButtonClick);
             // 
-            // InfoFriendlyNameLabel
+            // SubjectAlternativeNameLabel
             // 
-            resources.ApplyResources(this.InfoFriendlyNameLabel, "InfoFriendlyNameLabel");
-            this.InfoFriendlyNameLabel.Name = "InfoFriendlyNameLabel";
+            resources.ApplyResources(this.SubjectAlternativeNameLabel, "SubjectAlternativeNameLabel");
+            this.SubjectAlternativeNameLabel.Name = "SubjectAlternativeNameLabel";
             // 
-            // InfoFriendlyNameTextBox
+            // SubjectAlternativeNameTextBox
             // 
-            this.InfoTableLayoutPanel.SetColumnSpan(this.InfoFriendlyNameTextBox, 4);
-            resources.ApplyResources(this.InfoFriendlyNameTextBox, "InfoFriendlyNameTextBox");
-            this.InfoFriendlyNameTextBox.Name = "InfoFriendlyNameTextBox";
+            this.InfoTableLayoutPanel.SetColumnSpan(this.SubjectAlternativeNameTextBox, 5);
+            resources.ApplyResources(this.SubjectAlternativeNameTextBox, "SubjectAlternativeNameTextBox");
+            this.SubjectAlternativeNameTextBox.Name = "SubjectAlternativeNameTextBox";
             // 
             // PrincipalForm
             // 
@@ -511,6 +526,8 @@
         private System.Windows.Forms.CheckBox InfoPurposeOcspSigningCheckBox;
         private System.Windows.Forms.Label InfoFriendlyNameLabel;
         private System.Windows.Forms.TextBox InfoFriendlyNameTextBox;
+        private System.Windows.Forms.Label SubjectAlternativeNameLabel;
+        private System.Windows.Forms.TextBox SubjectAlternativeNameTextBox;
     }
 }
 
