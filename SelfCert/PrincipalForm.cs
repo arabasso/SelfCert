@@ -4,7 +4,9 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
+using System.Text;
 using System.Windows.Forms;
 using Org.BouncyCastle.Asn1.X509;
 
@@ -17,9 +19,7 @@ namespace SelfCert
         {
             InitializeComponent();
 
-            Icon = Icon.ExtractAssociatedIcon(Assembly.GetExecutingAssembly().Location);
-
-            Font = new Font(Font.FontFamily, Font.Size * 1f);
+            Icon = ExtractAssociatedIcon(Assembly.GetExecutingAssembly().Location);
 
             LoadCerts();
 
@@ -36,6 +36,18 @@ namespace SelfCert
                 .OrderBy(ob => ob.Description)
                 .ToList();
             SaveStoreComboBox.SelectedIndex = 5;
+        }
+
+        [DllImport("shell32.dll")]
+        static extern IntPtr ExtractAssociatedIcon(IntPtr hInst, StringBuilder lpIconPath, out ushort lpiIcon);
+
+        public static Icon ExtractAssociatedIcon(string fileName)
+        {
+            var strB = new StringBuilder(fileName);
+            var handle = ExtractAssociatedIcon(IntPtr.Zero, strB, out _);
+            var ico = Icon.FromHandle(handle);
+
+            return ico;
         }
 
         private void LoadCerts()
