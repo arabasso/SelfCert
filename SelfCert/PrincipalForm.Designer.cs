@@ -51,6 +51,8 @@
             this.InfoPurposeOcspSigningCheckBox = new System.Windows.Forms.CheckBox();
             this.InfoFriendlyNameLabel = new System.Windows.Forms.Label();
             this.InfoFriendlyNameTextBox = new System.Windows.Forms.TextBox();
+            this.SubjectAlternativeNameLabel = new System.Windows.Forms.Label();
+            this.SubjectAlternativeNameTextBox = new System.Windows.Forms.TextBox();
             this.IssuerPanel = new System.Windows.Forms.Panel();
             this.IssuerGroupBox = new System.Windows.Forms.GroupBox();
             this.IssuerTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -75,8 +77,6 @@
             this.SaveLocationLabel = new System.Windows.Forms.Label();
             this.SaveLocationComboBox = new System.Windows.Forms.ComboBox();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.SubjectAlternativeNameLabel = new System.Windows.Forms.Label();
-            this.SubjectAlternativeNameTextBox = new System.Windows.Forms.TextBox();
             this.InfoPanel.SuspendLayout();
             this.InfoGroupBox.SuspendLayout();
             this.InfoTableLayoutPanel.SuspendLayout();
@@ -249,6 +249,17 @@
             this.InfoTableLayoutPanel.SetColumnSpan(this.InfoFriendlyNameTextBox, 4);
             resources.ApplyResources(this.InfoFriendlyNameTextBox, "InfoFriendlyNameTextBox");
             this.InfoFriendlyNameTextBox.Name = "InfoFriendlyNameTextBox";
+            // 
+            // SubjectAlternativeNameLabel
+            // 
+            resources.ApplyResources(this.SubjectAlternativeNameLabel, "SubjectAlternativeNameLabel");
+            this.SubjectAlternativeNameLabel.Name = "SubjectAlternativeNameLabel";
+            // 
+            // SubjectAlternativeNameTextBox
+            // 
+            this.InfoTableLayoutPanel.SetColumnSpan(this.SubjectAlternativeNameTextBox, 5);
+            resources.ApplyResources(this.SubjectAlternativeNameTextBox, "SubjectAlternativeNameTextBox");
+            this.SubjectAlternativeNameTextBox.Name = "SubjectAlternativeNameTextBox";
             // 
             // IssuerPanel
             // 
@@ -432,17 +443,6 @@
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButtonClick);
-            // 
-            // SubjectAlternativeNameLabel
-            // 
-            resources.ApplyResources(this.SubjectAlternativeNameLabel, "SubjectAlternativeNameLabel");
-            this.SubjectAlternativeNameLabel.Name = "SubjectAlternativeNameLabel";
-            // 
-            // SubjectAlternativeNameTextBox
-            // 
-            this.InfoTableLayoutPanel.SetColumnSpan(this.SubjectAlternativeNameTextBox, 5);
-            resources.ApplyResources(this.SubjectAlternativeNameTextBox, "SubjectAlternativeNameTextBox");
-            this.SubjectAlternativeNameTextBox.Name = "SubjectAlternativeNameTextBox";
             // 
             // PrincipalForm
             // 

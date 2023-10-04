@@ -198,7 +198,7 @@ namespace SelfCert
             InfoPurposeOcspSigningCheckBox.Checked = Properties.Settings.Default.InfoPurposeOcspSigning;
         }
 
-        private static readonly Dictionary<string, int>
+        public static readonly Dictionary<string, int>
             NamesDictionary = new Dictionary<string, int>
             {
                 { "OTHERNAME", GeneralName.OtherName },
